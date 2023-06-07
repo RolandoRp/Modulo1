@@ -1,8 +1,5 @@
-console.log(bar);
-console.log(baz);
-foo();
-function foo() {
-   console.log('Hola!');
+var instructor = 'Tony';
+if (true) {
+   var instructor = 'Franco';
 }
-var bar = 1;
-baz = 2;
+console.log(instructor);
