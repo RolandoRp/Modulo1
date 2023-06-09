@@ -16,17 +16,35 @@ Secuencia:  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 Como ejercicio adicional y completamente opcional, al terminar de resolver este problema pueden intentar definir funciones que logren los mismos resultados pero de manera iterativa.
 */
 
-function nFactorial(n) {
+function nFactorial(n) { //3
+  if (n === 0 || n === 1)
+    return 1
+  
+  else if(n < 0)
+    return 0
 
+  return n * nFactorial(n - 1)
 }
+console.log(nFactorial(5))
+
+
 
 function nFibonacci(n) {
-  let serieF = [0, 1]
+  // let serieF = [0, 1]
 
-    for(let i = 2; i <= n; i++) {
-        serieF.push(serieF[i - 1] + serieF[i - 2])
-    }
-    return serieF[n]
+  //   for(let i = 2; i <= n; i++) {
+  //       serieF.push(serieF[i - 1] + serieF[i - 2])
+  //   }
+  //   return serieF[n]
+
+    //Recursion
+    if (n <= 0)
+    return 0;
+
+    else if (n === 1)
+    return 1;
+
+    return nFibonacci(n - 1) + nFibonacci(n - 2)
 }
 
 /*
@@ -38,7 +56,21 @@ Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde e
 Pueden utilizar class o función constructora.
 */
 
-function Queue() {}
+function Queue() {
+  this.array = []
+}
+
+Queue.prototype.enqueue = function (elem) {
+  this.array.push(elem);
+}
+
+Queue.prototype.dequeue = function(elem) {
+  return this.array.shift();
+}
+
+Queue.prototype.size = function() {
+  return this.array.length; 
+}
 
 /*⚠️ No modificar nada debajo de esta línea ⚠️*/
 module.exports = {
