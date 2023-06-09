@@ -64,7 +64,7 @@ Queue.prototype.enqueue = function (elem) {
   this.array.push(elem);
 }
 
-Queue.prototype.dequeue = function(elem) {
+Queue.prototype.dequeue = function() {
   return this.array.shift();
 }
 
