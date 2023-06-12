@@ -46,7 +46,7 @@ LinkedList.prototype.add = function(element) { //Metodo para unir los nodos,
     return nodo
   }
 
-  while(current.next !== null) { //SOlo entro aca si next NO ES NULL
+  while(current.next !== null) { //SOlO entro aca si next NO ES NULL
     current = current.next
   }
 
