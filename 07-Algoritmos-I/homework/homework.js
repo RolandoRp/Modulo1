@@ -54,6 +54,8 @@ function insertionSort(array) {
   }
   return array
 }
+// let array = [4, 3, 6, 8, 5, 1]
+// array = console.log(insertionSort(array))
 
 
 function selectionSort(array) {
